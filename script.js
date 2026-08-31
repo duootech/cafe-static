@@ -19,14 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
 function showToast(message, isSuccess = true) {
     const toast = document.getElementById('toast');
     if (!toast) return;
-    
+
     // Set message
     const msgEl = toast.querySelector('.toast-message');
     const iconEl = toast.querySelector('.toast-icon');
-    
+
     msgEl.textContent = message;
     iconEl.textContent = isSuccess ? '✓' : 'ℹ';
-    
+
     if (!isSuccess) {
         toast.style.backgroundColor = 'var(--color-terracotta)';
     } else {
@@ -35,12 +35,12 @@ function showToast(message, isSuccess = true) {
 
     // Toggle class
     toast.classList.remove('hidden');
-    
+
     // Clear previous timeout if any
     if (window.toastTimeout) {
         clearTimeout(window.toastTimeout);
     }
-    
+
     // Hide after 3 seconds
     window.toastTimeout = setTimeout(() => {
         toast.classList.add('hidden');
@@ -71,7 +71,7 @@ function initMobileMenu() {
     mobileToggle.addEventListener('click', () => {
         const isOpen = navLinks.classList.toggle('open');
         mobileToggle.setAttribute('aria-expanded', isOpen);
-        
+
         // Animated hamburger look
         const bars = mobileToggle.querySelectorAll('.bar');
         if (isOpen) {
@@ -102,11 +102,11 @@ function initMobileMenu() {
 /* --- Smooth Scrolling --- */
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const targetEl = document.querySelector(targetId);
             if (targetEl) {
                 targetEl.scrollIntoView({
@@ -158,11 +158,11 @@ const roleBadge = document.getElementById('current-role-badge');
 tabButtons.forEach(btn => {
     btn.addEventListener('click', () => {
         const targetTab = btn.getAttribute('data-tab');
-        
+
         // Update tabs active state
         tabButtons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        
+
         // Update visible screens
         screens.forEach(scr => scr.classList.remove('active'));
         const activeScreen = document.getElementById(`screen-${targetTab}`);
@@ -175,7 +175,7 @@ tabButtons.forEach(btn => {
 
 function updateRoleBadgeByTab(tabName) {
     if (!roleBadge) return;
-    switch(tabName) {
+    switch (tabName) {
         case 'pos':
             roleBadge.textContent = 'Barista Mode';
             roleBadge.style.backgroundColor = 'var(--color-green-tint)';
@@ -212,7 +212,7 @@ function updateRoleBadgeByTab(tabName) {
 /* --- 1. POS Terminal Tab --- */
 function initPOSSimulator() {
     let orderItems = []; // Array to hold {name, price, qty}
-    
+
     const productButtons = document.querySelectorAll('.pos-item-card');
     const receiptList = document.getElementById('receipt-list');
     const subtotalEl = document.getElementById('pos-subtotal');
@@ -229,7 +229,7 @@ function initPOSSimulator() {
         btn.addEventListener('click', () => {
             catButtons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            
+
             const category = btn.getAttribute('data-category');
             productButtons.forEach(card => {
                 const cardCategory = card.getAttribute('data-category');
@@ -260,7 +260,7 @@ function initPOSSimulator() {
         card.addEventListener('click', () => {
             const name = card.getAttribute('data-name');
             const price = parseFloat(card.getAttribute('data-price'));
-            
+
             // Add or increment item
             const existingItem = orderItems.find(item => item.name === name);
             if (existingItem) {
@@ -268,7 +268,7 @@ function initPOSSimulator() {
             } else {
                 orderItems.push({ name, price, qty: 1 });
             }
-            
+
             updateReceipt();
         });
     });
@@ -281,10 +281,10 @@ function initPOSSimulator() {
 
     checkoutBtn.addEventListener('click', () => {
         if (orderItems.length === 0) return;
-        
+
         // Capture stats to show interaction changes on Analytics Tab
         const finalTotal = totalEl.textContent;
-        
+
         // Checkout state representation
         checkoutBtn.textContent = 'Processing Transaction...';
         checkoutBtn.classList.add('disabled');
@@ -293,7 +293,7 @@ function initPOSSimulator() {
         setTimeout(() => {
             // Success State
             showToast(`Transaction complete: ${finalTotal}! Receipt printed.`);
-            
+
             // Render simulation of print output inside receipt panel
             receiptList.innerHTML = `
                 <div class="form-success-state" style="padding: 10px 0;">
@@ -302,7 +302,7 @@ function initPOSSimulator() {
                     <p style="font-size:10px; margin-top:2px;">Ticket #2084 sent to Barista queue.</p>
                 </div>
             `;
-            
+
             // Update dummy analytics values in background
             updateAnalyticsSim(finalTotal);
 
@@ -412,7 +412,7 @@ function initSchedulerSimulator() {
             <strong class="shift-name">You (Barista)</strong>
             <span class="shift-role">Barista</span>
         `;
-        
+
         showToast('Shift claimed successfully!');
     });
 
@@ -435,7 +435,7 @@ function initInventorySimulator() {
     reorderBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const itemKey = btn.getAttribute('data-item');
-            
+
             // Check if already ordered
             if (btn.classList.contains('reorder-ok') && btn.textContent !== 'Reorder') return;
 
@@ -503,7 +503,7 @@ function initRoleSwitcher() {
                 let badgeText = 'System Demo';
                 let bg = 'var(--bg-cream-dark)';
                 let textCol = 'var(--color-text-muted)';
-                
+
                 if (role === 'barista') {
                     badgeText = 'Barista Mode';
                     bg = 'var(--color-green-tint)';
@@ -530,73 +530,241 @@ function initRoleSwitcher() {
 
 
 /* --- 5. Contact Lead Form --- */
+// function initLeadForm() {
+//     const form = document.getElementById('lead-form');
+//     const formSuccess = document.getElementById('form-success');
+//     const submitBtn = document.getElementById('btn-submit-lead');
+//     const resetBtn = document.getElementById('btn-reset-form');
+
+//     if (!form || !formSuccess) return;
+
+//     form.addEventListener('submit', (e) => {
+//         e.preventDefault();
+
+//         // Trigger validation checks
+//         const isValid = validateForm();
+//         if (!isValid) return;
+
+//         // Visual submitting loading states
+//         const btnText = submitBtn.querySelector('.btn-text-content');
+//         const spinner = submitBtn.querySelector('.loader-spinner');
+
+//         submitBtn.disabled = true;
+//         if (btnText && spinner) {
+//             btnText.textContent = 'Submitting Request...';
+//             spinner.classList.remove('hidden');
+//         }
+
+//         // Simulate API network submission delay
+//         setTimeout(() => {
+//             // Hide Form Panel, reveal Success State panel
+//             form.classList.add('hidden');
+//             formSuccess.classList.remove('hidden');
+
+//             // Re-enable button variables in background for reset loop
+//             submitBtn.disabled = false;
+//             if (btnText && spinner) {
+//                 btnText.textContent = 'Request Custom Proposal';
+//                 spinner.classList.add('hidden');
+//             }
+
+//             showToast('Proposal request submitted successfully!');
+//         }, 1500);
+//     });
+
+//     // Form inputs error clearing listener
+//     form.querySelectorAll('input, select, textarea').forEach(input => {
+//         input.addEventListener('input', () => {
+//             const formGroup = input.parentElement;
+//             if (formGroup && formGroup.classList.contains('has-error')) {
+//                 formGroup.classList.remove('has-error');
+//             }
+//         });
+//     });
+
+//     // Reset loop button action
+//     resetBtn.addEventListener('click', () => {
+//         form.reset();
+//         formSuccess.classList.add('hidden');
+//         form.classList.remove('hidden');
+//     });
+
+//     function validateForm() {
+//         let isFormValid = true;
+
+//         const nameInput = document.getElementById('form-name');
+//         const emailInput = document.getElementById('form-email');
+//         const typeSelect = document.getElementById('form-type');
+
+//         // 1. Name Check
+//         if (!nameInput.value.trim()) {
+//             toggleInputError(nameInput, true);
+//             isFormValid = false;
+//         } else {
+//             toggleInputError(nameInput, false);
+//         }
+
+//         // 2. Email Check
+//         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//         if (!emailInput.value.trim() || !emailRegex.test(emailInput.value)) {
+//             toggleInputError(emailInput, true);
+//             isFormValid = false;
+//         } else {
+//             toggleInputError(emailInput, false);
+//         }
+
+//         // 3. Select Dropdown Check
+//         if (!typeSelect.value) {
+//             toggleInputError(typeSelect, true);
+//             isFormValid = false;
+//         } else {
+//             toggleInputError(typeSelect, false);
+//         }
+
+//         return isFormValid;
+//     }
+
+//     function toggleInputError(inputEl, isError) {
+//         const formGroup = inputEl.parentElement;
+//         if (!formGroup) return;
+
+//         if (isError) {
+//             formGroup.classList.add('has-error');
+//         } else {
+//             formGroup.classList.remove('has-error');
+//         }
+//     }
+// }
+
 function initLeadForm() {
-    const form = document.getElementById('lead-form');
-    const formSuccess = document.getElementById('form-success');
-    const submitBtn = document.getElementById('btn-submit-lead');
-    const resetBtn = document.getElementById('btn-reset-form');
+    const form = document.getElementById("lead-form");
+    const formSuccess = document.getElementById("form-success");
+    const submitBtn = document.getElementById("btn-submit-lead");
+    const resetBtn = document.getElementById("btn-reset-form");
 
-    if (!form || !formSuccess) return;
+    if (!form || !formSuccess || !submitBtn || !resetBtn) return;
 
-    form.addEventListener('submit', (e) => {
+    const API_URL = "https://duootech.in/api/contact";
+
+    form.addEventListener("submit", async (e) => {
         e.preventDefault();
-        
-        // Trigger validation checks
+
         const isValid = validateForm();
+
         if (!isValid) return;
 
-        // Visual submitting loading states
-        const btnText = submitBtn.querySelector('.btn-text-content');
-        const spinner = submitBtn.querySelector('.loader-spinner');
+        const btnText = submitBtn.querySelector(".btn-text-content");
+        const spinner = submitBtn.querySelector(".loader-spinner");
 
-        submitBtn.disabled = true;
-        if (btnText && spinner) {
-            btnText.textContent = 'Submitting Request...';
-            spinner.classList.remove('hidden');
-        }
+        // Get form values
+        const formData = {
+            name: document.getElementById("form-name").value.trim(),
+            email: document.getElementById("form-email").value.trim(),
+            phone: document.getElementById("form-phone").value.trim(),
+            cafe: document.getElementById("form-cafe").value,
+            message: document.getElementById("form-message").value.trim(),
+        };
 
-        // Simulate API network submission delay
-        setTimeout(() => {
-            // Hide Form Panel, reveal Success State panel
-            form.classList.add('hidden');
-            formSuccess.classList.remove('hidden');
-            
-            // Re-enable button variables in background for reset loop
-            submitBtn.disabled = false;
+        try {
+            // Loading state
+            submitBtn.disabled = true;
+
             if (btnText && spinner) {
-                btnText.textContent = 'Request Custom Proposal';
-                spinner.classList.add('hidden');
+                btnText.textContent = "Submitting Request...";
+                spinner.classList.remove("hidden");
             }
 
-            showToast('Proposal request submitted successfully!');
-        }, 1500);
+            // API Request
+            const response = await fetch(API_URL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: {
+                    name: formData?.name,
+                    phoneNo: formData?.phone,
+                    email: formData?.email,
+                    projectName: "Cafefy",
+                    message: formData?.cafe + " - " + formData?.message,
+                },
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(
+                    result.message || "Failed to submit your request."
+                );
+            }
+
+            // Success
+            form.classList.add("hidden");
+            formSuccess.classList.remove("hidden");
+
+            showToast(
+                result.message || "Proposal request submitted successfully!"
+            );
+
+        } catch (error) {
+            console.error("Lead submission error:", error);
+
+            showToast(
+                error.message ||
+                "Something went wrong. Please try again later."
+            );
+
+        } finally {
+            // Reset loading state
+            submitBtn.disabled = false;
+
+            if (btnText && spinner) {
+                btnText.textContent = "Request Custom Proposal";
+                spinner.classList.add("hidden");
+            }
+        }
     });
 
-    // Form inputs error clearing listener
-    form.querySelectorAll('input, select, textarea').forEach(input => {
-        input.addEventListener('input', () => {
+    // Remove error when user starts typing
+    form.querySelectorAll("input, select, textarea").forEach((input) => {
+        input.addEventListener("input", () => {
             const formGroup = input.parentElement;
-            if (formGroup && formGroup.classList.contains('has-error')) {
-                formGroup.classList.remove('has-error');
+
+            if (formGroup?.classList.contains("has-error")) {
+                formGroup.classList.remove("has-error");
+            }
+        });
+
+        // Important for select dropdown
+        input.addEventListener("change", () => {
+            const formGroup = input.parentElement;
+
+            if (formGroup?.classList.contains("has-error")) {
+                formGroup.classList.remove("has-error");
             }
         });
     });
 
-    // Reset loop button action
-    resetBtn.addEventListener('click', () => {
+    // Reset form
+    resetBtn.addEventListener("click", () => {
         form.reset();
-        formSuccess.classList.add('hidden');
-        form.classList.remove('hidden');
+
+        // Remove validation errors
+        form.querySelectorAll(".form-group").forEach((group) => {
+            group.classList.remove("has-error");
+        });
+
+        formSuccess.classList.add("hidden");
+        form.classList.remove("hidden");
     });
 
     function validateForm() {
         let isFormValid = true;
 
-        const nameInput = document.getElementById('form-name');
-        const emailInput = document.getElementById('form-email');
-        const typeSelect = document.getElementById('form-type');
+        const nameInput = document.getElementById("form-name");
+        const emailInput = document.getElementById("form-email");
+        const typeSelect = document.getElementById("form-type");
 
-        // 1. Name Check
+        // Name
         if (!nameInput.value.trim()) {
             toggleInputError(nameInput, true);
             isFormValid = false;
@@ -604,34 +772,35 @@ function initLeadForm() {
             toggleInputError(nameInput, false);
         }
 
-        // 2. Email Check
+        // Email
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailInput.value.trim() || !emailRegex.test(emailInput.value)) {
+
+        if (
+            !emailInput.value.trim() ||
+            !emailRegex.test(emailInput.value.trim())
+        ) {
             toggleInputError(emailInput, true);
             isFormValid = false;
         } else {
             toggleInputError(emailInput, false);
         }
 
-        // 3. Select Dropdown Check
-        if (!typeSelect.value) {
-            toggleInputError(typeSelect, true);
-            isFormValid = false;
-        } else {
-            toggleInputError(typeSelect, false);
-        }
+        // Venue type
+        // if (!typeSelect.value) {
+        //     toggleInputError(typeSelect, true);
+        //     isFormValid = false;
+        // } else {
+        //     toggleInputError(typeSelect, false);
+        // }
 
         return isFormValid;
     }
 
     function toggleInputError(inputEl, isError) {
         const formGroup = inputEl.parentElement;
+
         if (!formGroup) return;
 
-        if (isError) {
-            formGroup.classList.add('has-error');
-        } else {
-            formGroup.classList.remove('has-error');
-        }
+        formGroup.classList.toggle("has-error", isError);
     }
 }

@@ -1,896 +1,1336 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CremaFlow: A modern, cloud-based cafe management system demo. Optimize POS, scheduling, inventory, and analytics for your coffee shop or restaurant.">
-    <title>CremaFlow | Cafe Management System Demo Website</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Cafefy: A modern, cloud-based cafe management system demo. Optimize POS, scheduling, inventory, and analytics for your coffee shop or restaurant."
+    />
+    <title>Cafefy | Cafe Management System Demo Website</title>
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <!-- CSS Stylesheet -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <!-- Navigation Header -->
     <header class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#hero" class="nav-logo">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-icon">
-                    <path d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V8H6V19ZM8 10H16V19H8V10ZM16 5V3H8V5H3V7H21V5H16Z" fill="currentColor"/>
-                    <path d="M2 9H4V17H2V9Z" fill="currentColor"/>
-                    <path d="M20 9H22V17H20V9Z" fill="currentColor"/>
-                </svg>
-                <span>CremaFlow</span>
-            </a>
-            <nav class="nav-links" id="nav-links">
-                <a href="#problems" class="nav-link">Challenges</a>
-                <a href="#features" class="nav-link">Features</a>
-                <a href="#demo" class="nav-link">Live Demo</a>
-                <a href="#workflow" class="nav-link">Workflow</a>
-                <a href="#contact" class="nav-link nav-btn">Get This App</a>
-            </nav>
-            <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-        </div>
+      <div class="nav-container">
+        <a href="#hero" class="nav-logo">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="logo-icon"
+          >
+            <path
+              d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V8H6V19ZM8 10H16V19H8V10ZM16 5V3H8V5H3V7H21V5H16Z"
+              fill="currentColor"
+            />
+            <path d="M2 9H4V17H2V9Z" fill="currentColor" />
+            <path d="M20 9H22V17H20V9Z" fill="currentColor" />
+          </svg>
+          <span>Cafefy</span>
+        </a>
+        <nav class="nav-links" id="nav-links">
+          <a href="#problems" class="nav-link">Challenges</a>
+          <a href="#features" class="nav-link">Features</a>
+          <a href="#demo" class="nav-link">Live Demo</a>
+          <a href="#workflow" class="nav-link">Workflow</a>
+          <a href="#contact" class="nav-link nav-btn">Get This App</a>
+        </nav>
+        <button
+          class="mobile-menu-toggle"
+          id="mobile-toggle"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-tag">Portfolio Showcase</div>
-                <h1 class="hero-title">Streamline Your Cafe's Daily Operations</h1>
-                <p class="hero-subtitle">The all-in-one management platform custom-built to eliminate paperwork, sync staff schedules, and maximize table turnover.</p>
-                <div class="hero-actions">
-                    <a href="#demo" class="btn btn-primary">Try Live Simulator</a>
-                    <a href="#contact" class="btn btn-secondary">Get This For Your Cafe</a>
-                </div>
-                <div class="hero-stats-mini">
-                    <div class="stat-mini-item">
-                        <span class="stat-num">15h+</span>
-                        <span class="stat-lbl">Admin Saved/Wk</span>
-                    </div>
-                    <div class="stat-mini-divider"></div>
-                    <div class="stat-mini-item">
-                        <span class="stat-num">99.8%</span>
-                        <span class="stat-lbl">Order Accuracy</span>
-                    </div>
-                </div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <!-- <div class="hero-tag">Portfolio Showcase</div> -->
+          <h1 class="hero-title">Streamline Your Cafe's Daily Operations</h1>
+          <p class="hero-subtitle">
+            The all-in-one management platform custom-built to eliminate
+            paperwork, sync staff schedules, and maximize table turnover.
+          </p>
+          <div class="hero-actions">
+            <a href="#demo" class="btn btn-primary">Our Features</a>
+            <a href="#contact" class="btn btn-secondary"
+              >Get This For Your Cafe</a
+            >
+          </div>
+          <div class="hero-stats-mini">
+            <div class="stat-mini-item">
+              <span class="stat-num">15h+</span>
+              <span class="stat-lbl">Admin Saved/Wk</span>
             </div>
-            <div class="hero-visual">
-                <div class="mockup-frame-hero">
-                    <div class="mockup-header">
-                        <div class="mockup-dots">
-                            <span class="dot-red"></span>
-                            <span class="dot-yellow"></span>
-                            <span class="dot-green"></span>
-                        </div>
-                        <div class="mockup-title-bar">CremaFlow - Manager Dashboard</div>
-                    </div>
-                    <div class="mockup-body-hero">
-                        <div class="hero-dashboard-preview">
-                            <div class="preview-sidebar">
-                                <div class="p-logo"></div>
-                                <div class="p-nav-item active"></div>
-                                <div class="p-nav-item"></div>
-                                <div class="p-nav-item"></div>
-                                <div class="p-nav-item"></div>
-                            </div>
-                            <div class="preview-main">
-                                <div class="preview-header">
-                                    <div class="p-title">Overview</div>
-                                    <div class="p-profile"></div>
-                                </div>
-                                <div class="preview-cards">
-                                    <div class="p-card">
-                                        <span class="p-card-lbl">Today's Sales</span>
-                                        <span class="p-card-val">$1,248.50</span>
-                                        <span class="p-card-trend trend-up">+14% vs yesterday</span>
-                                    </div>
-                                    <div class="p-card">
-                                        <span class="p-card-lbl">Active Shifts</span>
-                                        <span class="p-card-val">4 Baristas</span>
-                                        <span class="p-card-trend">Peak hour coming up</span>
-                                    </div>
-                                </div>
-                                <div class="preview-chart-box">
-                                    <span class="p-card-lbl">Hourly Order Traffic</span>
-                                    <div class="preview-bars">
-                                        <div class="p-bar" style="height: 30%"></div>
-                                        <div class="p-bar" style="height: 45%"></div>
-                                        <div class="p-bar" style="height: 85%"></div>
-                                        <div class="p-bar" style="height: 95%"></div>
-                                        <div class="p-bar" style="height: 60%"></div>
-                                        <div class="p-bar" style="height: 40%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Floating Accent Badge -->
-                        <div class="hero-floating-badge">
-                            <div class="badge-icon">☕</div>
-                            <div class="badge-text">
-                                <strong>Smart Alert</strong>
-                                <span>Espresso Beans low (1.2kg left)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="stat-mini-divider"></div>
+            <div class="stat-mini-item">
+              <span class="stat-num">99.8%</span>
+              <span class="stat-lbl">Order Accuracy</span>
             </div>
+          </div>
         </div>
+        <div class="hero-visual">
+          <div class="mockup-frame-hero">
+            <div class="mockup-header">
+              <div class="mockup-dots">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+              </div>
+              <div class="mockup-title-bar">Cafefy - Manager Dashboard</div>
+            </div>
+            <div class="mockup-body-hero">
+              <div class="hero-dashboard-preview">
+                <div class="preview-sidebar">
+                  <div class="p-logo"></div>
+                  <div class="p-nav-item active"></div>
+                  <div class="p-nav-item"></div>
+                  <div class="p-nav-item"></div>
+                  <div class="p-nav-item"></div>
+                </div>
+                <div class="preview-main">
+                  <div class="preview-header">
+                    <div class="p-title">Overview</div>
+                    <div class="p-profile"></div>
+                  </div>
+                  <div class="preview-cards">
+                    <div class="p-card">
+                      <span class="p-card-lbl">Today's Sales</span>
+                      <span class="p-card-val">$1,248.50</span>
+                      <span class="p-card-trend trend-up"
+                        >+14% vs yesterday</span
+                      >
+                    </div>
+                    <div class="p-card">
+                      <span class="p-card-lbl">Active Shifts</span>
+                      <span class="p-card-val">4 Baristas</span>
+                      <span class="p-card-trend">Peak hour coming up</span>
+                    </div>
+                  </div>
+                  <div class="preview-chart-box">
+                    <span class="p-card-lbl">Hourly Order Traffic</span>
+                    <div class="preview-bars">
+                      <div class="p-bar" style="height: 30%"></div>
+                      <div class="p-bar" style="height: 45%"></div>
+                      <div class="p-bar" style="height: 85%"></div>
+                      <div class="p-bar" style="height: 95%"></div>
+                      <div class="p-bar" style="height: 60%"></div>
+                      <div class="p-bar" style="height: 40%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Floating Accent Badge -->
+              <div class="hero-floating-badge">
+                <div class="badge-icon">☕</div>
+                <div class="badge-text">
+                  <strong>Smart Alert</strong>
+                  <span>Espresso Beans low (1.2kg left)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Problem & Solution Section -->
     <section class="problems" id="problems">
-        <div class="section-container">
-            <div class="section-header">
-                <span class="section-tag">Pain Points vs Solutions</span>
-                <h2 class="section-title">The Real Cost of Old-School Cafe Operations</h2>
-                <p class="section-desc">Running a cafe is hard work. Doing it manually makes it twice as slow and prone to costly mistakes. Here is how modern software makes the difference.</p>
-            </div>
-            <div class="problems-grid">
-                <!-- Card 1 -->
-                <div class="problem-card">
-                    <div class="card-icon-wrapper problem-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-                    </div>
-                    <h3 class="problem-card-title">Paper Tickets & Lost Orders</h3>
-                    <p class="problem-card-text">Written tickets get greasy, lost, or misread, causing kitchen delays, food waste, and frustrated customers waiting for their drinks.</p>
-                    <div class="solution-arrow">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
-                    </div>
-                    <div class="solution-highlight">
-                        <strong>The Solution:</strong> Real-time POS display. Orders go straight from the screen to the barista queue instantly, color-coded by wait time.
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="problem-card">
-                    <div class="card-icon-wrapper problem-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                    </div>
-                    <h3 class="problem-card-title">Staff Scheduling Chaos</h3>
-                    <p class="problem-card-text">Managing shifts via text messages and paper spreadsheets leads to double-scheduling, forgotten shifts, and frantic calling during peak rushes.</p>
-                    <div class="solution-arrow">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
-                    </div>
-                    <div class="solution-highlight">
-                        <strong>The Solution:</strong> Smart visual calendar scheduler. Set recurring patterns, avoid conflicts, and allow baristas to claim open shifts with one click.
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="problem-card">
-                    <div class="card-icon-wrapper problem-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
-                    </div>
-                    <h3 class="problem-card-title">Inventory Guesswork</h3>
-                    <p class="problem-card-text">Not knowing ingredient levels results in running out of oat milk mid-rush, or over-ordering fresh pastries that end up thrown away.</p>
-                    <div class="solution-arrow">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
-                    </div>
-                    <div class="solution-highlight">
-                        <strong>The Solution:</strong> Auto-deducting stock count. Every latte sold automatically subtracts coffee beans and milk, sending push alerts for low stock.
-                    </div>
-                </div>
-            </div>
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">Pain Points vs Solutions</span>
+          <h2 class="section-title">
+            The Real Cost of Old-School Cafe Operations
+          </h2>
+          <p class="section-desc">
+            Running a cafe is hard work. Doing it manually makes it twice as
+            slow and prone to costly mistakes. Here is how modern software makes
+            the difference.
+          </p>
         </div>
+        <div class="problems-grid">
+          <!-- Card 1 -->
+          <div class="problem-card">
+            <div class="card-icon-wrapper problem-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+                <polyline points="10 9 9 9 8 9" />
+              </svg>
+            </div>
+            <h3 class="problem-card-title">Paper Tickets & Lost Orders</h3>
+            <p class="problem-card-text">
+              Written tickets get greasy, lost, or misread, causing kitchen
+              delays, food waste, and frustrated customers waiting for their
+              drinks.
+            </p>
+            <div class="solution-arrow">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <polyline points="19 12 12 19 5 12" />
+              </svg>
+            </div>
+            <div class="solution-highlight">
+              <strong>The Solution:</strong> Real-time POS display. Orders go
+              straight from the screen to the barista queue instantly,
+              color-coded by wait time.
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="problem-card">
+            <div class="card-icon-wrapper problem-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>
+            </div>
+            <h3 class="problem-card-title">Staff Scheduling Chaos</h3>
+            <p class="problem-card-text">
+              Managing shifts via text messages and paper spreadsheets leads to
+              double-scheduling, forgotten shifts, and frantic calling during
+              peak rushes.
+            </p>
+            <div class="solution-arrow">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <polyline points="19 12 12 19 5 12" />
+              </svg>
+            </div>
+            <div class="solution-highlight">
+              <strong>The Solution:</strong> Smart visual calendar scheduler.
+              Set recurring patterns, avoid conflicts, and allow baristas to
+              claim open shifts with one click.
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="problem-card">
+            <div class="card-icon-wrapper problem-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
+                <path d="M22 12A10 10 0 0 0 12 2v10z" />
+              </svg>
+            </div>
+            <h3 class="problem-card-title">Inventory Guesswork</h3>
+            <p class="problem-card-text">
+              Not knowing ingredient levels results in running out of oat milk
+              mid-rush, or over-ordering fresh pastries that end up thrown away.
+            </p>
+            <div class="solution-arrow">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <polyline points="19 12 12 19 5 12" />
+              </svg>
+            </div>
+            <div class="solution-highlight">
+              <strong>The Solution:</strong> Auto-deducting stock count. Every
+              latte sold automatically subtracts coffee beans and milk, sending
+              push alerts for low stock.
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Core Features Grid -->
     <section class="features" id="features">
-        <div class="section-container">
-            <div class="section-header">
-                <span class="section-tag">System Capabilities</span>
-                <h2 class="section-title">Designed Specifically for Cafe Workflows</h2>
-                <p class="section-desc">Every element of CremaFlow is tailored to cafe operations, eliminating friction points so your team can focus on crafting the perfect cup.</p>
-            </div>
-            <div class="features-grid">
-                <!-- Feature 1 -->
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-                    </div>
-                    <h3 class="feature-title">Fast POS Terminal</h3>
-                    <p class="feature-text">High-speed order taking designed for iPad or touchscreen. Add modifiers (extra shot, oat milk, iced) in a single tap.</p>
-                </div>
-
-                <!-- Feature 2 -->
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    </div>
-                    <h3 class="feature-title">Role-Based Access</h3>
-                    <p class="feature-text">Limit access by role. Baristas see POS, Managers handle cash drops, and Admins view high-level profit metrics.</p>
-                </div>
-
-                <!-- Feature 3 -->
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-                    </div>
-                    <h3 class="feature-title">Dynamic Inventory Tracker</h3>
-                    <p class="feature-text">Track cups, beans, syrups, and milk down to the milliliter. Automatically flags items nearing critical thresholds.</p>
-                </div>
-
-                <!-- Feature 4 -->
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
-                    </div>
-                    <h3 class="feature-title">Visual Shift Scheduler</h3>
-                    <p class="feature-text">Plan weekly grids in minutes. Send notifications to employee mobile devices immediately when schedules publish.</p>
-                </div>
-
-                <!-- Feature 5 -->
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-                    </div>
-                    <h3 class="feature-title">Real-Time Reports</h3>
-                    <p class="feature-text">Identify peak hour sales, average transaction size, staff performance metrics, and ingredient profit margins instantly.</p>
-                </div>
-
-                <!-- Feature 6 -->
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    </div>
-                    <h3 class="feature-title">Table Layout & Floor Planner</h3>
-                    <p class="feature-text">Custom map representing your tables. Track occupied, reserved, and dirty tables in real-time from a central view.</p>
-                </div>
-            </div>
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">System Capabilities</span>
+          <h2 class="section-title">
+            Designed Specifically for Cafe Workflows
+          </h2>
+          <p class="section-desc">
+            Every element of Cafefy is tailored to cafe operations, eliminating
+            friction points so your team can focus on crafting the perfect cup.
+          </p>
         </div>
+        <div class="features-grid">
+          <!-- Feature 1 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="8" x2="12" y2="16" />
+                <line x1="8" y1="12" x2="16" y2="12" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Fast POS Terminal</h3>
+            <p class="feature-text">
+              High-speed order taking designed for iPad or touchscreen. Add
+              modifiers (extra shot, oat milk, iced) in a single tap.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Role-Based Access</h3>
+            <p class="feature-text">
+              Limit access by role. Baristas see POS, Managers handle cash
+              drops, and Admins view high-level profit metrics.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                />
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                <line x1="12" y1="22.08" x2="12" y2="12" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Dynamic Inventory Tracker</h3>
+            <p class="feature-text">
+              Track cups, beans, syrups, and milk down to the milliliter.
+              Automatically flags items nearing critical thresholds.
+            </p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+                <path d="M8 14h.01" />
+                <path d="M12 14h.01" />
+                <path d="M16 14h.01" />
+                <path d="M8 18h.01" />
+                <path d="M12 18h.01" />
+                <path d="M16 18h.01" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Visual Shift Scheduler</h3>
+            <p class="feature-text">
+              Plan weekly grids in minutes. Send notifications to employee
+              mobile devices immediately when schedules publish.
+            </p>
+          </div>
+
+          <!-- Feature 5 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="18" y1="20" x2="18" y2="10" />
+                <line x1="12" y1="20" x2="12" y2="4" />
+                <line x1="6" y1="20" x2="6" y2="14" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Real-Time Reports</h3>
+            <p class="feature-text">
+              Identify peak hour sales, average transaction size, staff
+              performance metrics, and ingredient profit margins instantly.
+            </p>
+          </div>
+
+          <!-- Feature 6 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Table Layout & Floor Planner</h3>
+            <p class="feature-text">
+              Custom map representing your tables. Track occupied, reserved, and
+              dirty tables in real-time from a central view.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Interactive Mockup Simulator Section -->
     <section class="demo" id="demo">
-        <div class="section-container">
-            <div class="section-header">
-                <span class="section-tag">Interactive Sandbox</span>
-                <h2 class="section-title">See The System In Action</h2>
-                <p class="section-desc">Click through the live tabs below to test drive the core screens of the management dashboard. Experience the responsive performance firsthand.</p>
-            </div>
-
-            <!-- Simulator Framework -->
-            <div class="simulator-wrapper">
-                <!-- Tabs Sidebar/Header -->
-                <div class="simulator-nav">
-                    <button class="sim-tab-btn active" data-tab="pos">
-                        <span class="btn-icon">🛒</span>
-                        <span class="btn-text">POS Terminal</span>
-                    </button>
-                    <button class="sim-tab-btn" data-tab="scheduler">
-                        <span class="btn-icon">📅</span>
-                        <span class="btn-text">Shift Scheduler</span>
-                    </button>
-                    <button class="sim-tab-btn" data-tab="inventory">
-                        <span class="btn-icon">📦</span>
-                        <span class="btn-text">Inventory Tracker</span>
-                    </button>
-                    <button class="sim-tab-btn" data-tab="analytics">
-                        <span class="btn-icon">📈</span>
-                        <span class="btn-text">Sales Analytics</span>
-                    </button>
-                    <button class="sim-tab-btn" data-tab="roles">
-                        <span class="btn-icon">🔑</span>
-                        <span class="btn-text">Role Switcher</span>
-                    </button>
-                </div>
-
-                <!-- Tablet Screen Container -->
-                <div class="simulator-viewport">
-                    <div class="simulator-header-bar">
-                        <div class="sim-mockup-dots">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <div class="sim-status-indicator">
-                            <span class="pulse-indicator"></span>
-                            <span class="status-lbl">Live Demo Session</span>
-                        </div>
-                        <div class="sim-role-badge" id="current-role-badge">Barista Mode</div>
-                    </div>
-
-                    <!-- Screen Content Areas -->
-                    <div class="simulator-screens">
-                        <!-- Screen 1: POS -->
-                        <div class="sim-screen active" id="screen-pos">
-                            <div class="pos-layout">
-                                <div class="pos-products">
-                                    <div class="pos-filter-bar">
-                                        <button class="pos-cat-btn active" data-category="coffee">Coffee</button>
-                                        <button class="pos-cat-btn" data-category="teas">Teas</button>
-                                        <button class="pos-cat-btn" data-category="bakery">Bakery</button>
-                                    </div>
-                                    <div class="pos-grid">
-                                        <button class="pos-item-card" data-name="Espresso" data-price="3.50" data-category="coffee">
-                                            <span class="pos-item-emoji">☕</span>
-                                            <span class="pos-item-name">Espresso</span>
-                                            <span class="pos-item-price">$3.50</span>
-                                        </button>
-                                        <button class="pos-item-card" data-name="Cappuccino" data-price="4.25" data-category="coffee">
-                                            <span class="pos-item-emoji">🥛</span>
-                                            <span class="pos-item-name">Cappuccino</span>
-                                            <span class="pos-item-price">$4.25</span>
-                                        </button>
-                                        <button class="pos-item-card" data-name="Vanilla Latte" data-price="4.75" data-category="coffee">
-                                            <span class="pos-item-emoji">🍯</span>
-                                            <span class="pos-item-name">Vanilla Latte</span>
-                                            <span class="pos-item-price">$4.75</span>
-                                        </button>
-                                        <button class="pos-item-card" data-name="Cold Brew" data-price="4.00" data-category="coffee">
-                                            <span class="pos-item-emoji">🧊</span>
-                                            <span class="pos-item-name">Cold Brew</span>
-                                            <span class="pos-item-price">$4.00</span>
-                                        </button>
-                                        <button class="pos-item-card" data-name="Matcha Latte" data-price="4.95" data-category="teas">
-                                            <span class="pos-item-emoji">🍵</span>
-                                            <span class="pos-item-name">Matcha Latte</span>
-                                            <span class="pos-item-price">$4.95</span>
-                                        </button>
-                                        <button class="pos-item-card" data-name="Peach Green Tea" data-price="4.25" data-category="teas">
-                                            <span class="pos-item-emoji">🍑</span>
-                                            <span class="pos-item-name">Peach Green Tea</span>
-                                            <span class="pos-item-price">$4.25</span>
-                                        </button>
-                                        <button class="pos-item-card" data-name="Chai Tea Latte" data-price="4.75" data-category="teas">
-                                            <span class="pos-item-emoji">🧋</span>
-                                            <span class="pos-item-name">Chai Tea Latte</span>
-                                            <span class="pos-item-price">$4.75</span>
-                                        </button>
-                                        <button class="pos-item-card" data-name="Butter Croissant" data-price="3.75" data-category="bakery">
-                                            <span class="pos-item-emoji">🥐</span>
-                                            <span class="pos-item-name">Butter Croissant</span>
-                                            <span class="pos-item-price">$3.75</span>
-                                        </button>
-                                        <button class="pos-item-card" data-name="Choc Muffin" data-price="3.95" data-category="bakery">
-                                            <span class="pos-item-emoji">🧁</span>
-                                            <span class="pos-item-name">Choc Muffin</span>
-                                            <span class="pos-item-price">$3.95</span>
-                                        </button>
-                                        <button class="pos-item-card" data-name="Avocado Toast" data-price="8.50" data-category="bakery">
-                                            <span class="pos-item-emoji">🥑</span>
-                                            <span class="pos-item-name">Avocado Toast</span>
-                                            <span class="pos-item-price">$8.50</span>
-                                        </button>
-                                        <button class="pos-item-card" data-name="Cinnamon Roll" data-price="4.00" data-category="bakery">
-                                            <span class="pos-item-emoji">🌀</span>
-                                            <span class="pos-item-name">Cinnamon Roll</span>
-                                            <span class="pos-item-price">$4.00</span>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="pos-receipt">
-                                    <div class="receipt-header">
-                                        <h4>Current Order</h4>
-                                        <button class="btn-clear-receipt" id="clear-order">Clear All</button>
-                                    </div>
-                                    <div class="receipt-items" id="receipt-list">
-                                        <div class="empty-receipt-placeholder">
-                                            <span class="placeholder-icon">📥</span>
-                                            <p>Click on menu items to start building an order.</p>
-                                        </div>
-                                    </div>
-                                    <div class="receipt-totals">
-                                        <div class="total-row">
-                                            <span>Subtotal</span>
-                                            <span id="pos-subtotal">$0.00</span>
-                                        </div>
-                                        <div class="total-row">
-                                            <span>Tax (8%)</span>
-                                            <span id="pos-tax">$0.00</span>
-                                        </div>
-                                        <div class="total-row grand-total">
-                                            <span>Total</span>
-                                            <span id="pos-total">$0.00</span>
-                                        </div>
-                                        <button class="btn-checkout disabled" id="pos-checkout" disabled>Complete Checkout</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Screen 2: Scheduler -->
-                        <div class="sim-screen" id="screen-scheduler">
-                            <div class="scheduler-layout">
-                                <div class="scheduler-header">
-                                    <h4>Shift Calendar - Current Week</h4>
-                                    <button class="btn-primary-sm" id="btn-add-shift">Publish Shifts</button>
-                                </div>
-                                <div class="schedule-grid">
-                                    <div class="schedule-day-column">
-                                        <div class="day-header">Monday</div>
-                                        <div class="shift-card barista-shift">
-                                            <span class="shift-time">06:00 AM - 02:00 PM</span>
-                                            <strong class="shift-name">Sarah M.</strong>
-                                            <span class="shift-role">Lead Barista</span>
-                                        </div>
-                                        <div class="shift-card waiter-shift">
-                                            <span class="shift-time">08:00 AM - 04:00 PM</span>
-                                            <strong class="shift-name">Alex K.</strong>
-                                            <span class="shift-role">Server</span>
-                                        </div>
-                                    </div>
-                                    <div class="schedule-day-column">
-                                        <div class="day-header">Tuesday</div>
-                                        <div class="shift-card barista-shift">
-                                            <span class="shift-time">06:00 AM - 02:00 PM</span>
-                                            <strong class="shift-name">Sarah M.</strong>
-                                            <span class="shift-role">Lead Barista</span>
-                                        </div>
-                                        <div class="shift-card manager-shift">
-                                            <span class="shift-time">09:00 AM - 05:00 PM</span>
-                                            <strong class="shift-name">David L.</strong>
-                                            <span class="shift-role">Manager</span>
-                                        </div>
-                                    </div>
-                                    <div class="schedule-day-column">
-                                        <div class="day-header">Wednesday</div>
-                                        <div class="shift-card barista-shift">
-                                            <span class="shift-time">06:00 AM - 02:00 PM</span>
-                                            <strong class="shift-name">Emily R.</strong>
-                                            <span class="shift-role">Barista</span>
-                                        </div>
-                                        <div class="shift-card waiter-shift">
-                                            <span class="shift-time">12:00 PM - 08:00 PM</span>
-                                            <strong class="shift-name">Alex K.</strong>
-                                            <span class="shift-role">Server</span>
-                                        </div>
-                                    </div>
-                                    <div class="schedule-day-column">
-                                        <div class="day-header">Thursday</div>
-                                        <div class="shift-card open-shift" id="claimable-shift">
-                                            <span class="shift-time">06:00 AM - 02:00 PM</span>
-                                            <strong class="shift-name">Open Shift</strong>
-                                            <button class="btn-claim-shift">Claim Shift</button>
-                                        </div>
-                                        <div class="shift-card manager-shift">
-                                            <span class="shift-time">09:00 AM - 05:00 PM</span>
-                                            <strong class="shift-name">David L.</strong>
-                                            <span class="shift-role">Manager</span>
-                                        </div>
-                                    </div>
-                                    <div class="schedule-day-column">
-                                        <div class="day-header">Friday</div>
-                                        <div class="shift-card barista-shift">
-                                            <span class="shift-time">06:00 AM - 02:00 PM</span>
-                                            <strong class="shift-name">Sarah M.</strong>
-                                            <span class="shift-role">Lead Barista</span>
-                                        </div>
-                                        <div class="shift-card barista-shift">
-                                            <span class="shift-time">12:00 PM - 08:00 PM</span>
-                                            <strong class="shift-name">Emily R.</strong>
-                                            <span class="shift-role">Barista</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Screen 3: Inventory -->
-                        <div class="sim-screen" id="screen-inventory">
-                            <div class="inventory-layout">
-                                <div class="inventory-header">
-                                    <h4>Real-Time Inventory Status</h4>
-                                    <span class="inventory-summary-tag" id="inv-summary">2 Low Stock Warnings</span>
-                                </div>
-                                <div class="inventory-list">
-                                    <div class="inventory-item row-warning" id="inv-beans">
-                                        <div class="inv-details">
-                                            <span class="inv-emoji">🫘</span>
-                                            <div class="inv-info">
-                                                <strong>Espresso Beans (Medium Roast)</strong>
-                                                <span class="inv-stats" id="beans-stats">1.2 kg left / Min: 5.0 kg</span>
-                                            </div>
-                                        </div>
-                                        <div class="inv-meter-wrapper">
-                                            <div class="inv-meter warning-meter" id="beans-meter" style="width: 24%"></div>
-                                        </div>
-                                        <button class="btn-reorder" data-item="beans">Order Stock</button>
-                                    </div>
-
-                                    <div class="inventory-item row-warning" id="inv-oat">
-                                        <div class="inv-details">
-                                            <span class="inv-emoji">🥛</span>
-                                            <div class="inv-info">
-                                                <strong>Oat Milk (Barista Blend)</strong>
-                                                <span class="inv-stats" id="oat-stats">3 Liters left / Min: 12.0 Liters</span>
-                                            </div>
-                                        </div>
-                                        <div class="inv-meter-wrapper">
-                                            <div class="inv-meter warning-meter" id="oat-meter" style="width: 25%"></div>
-                                        </div>
-                                        <button class="btn-reorder" data-item="oat">Order Stock</button>
-                                    </div>
-
-                                    <div class="inventory-item">
-                                        <div class="inv-details">
-                                            <span class="inv-emoji">🥛</span>
-                                            <div class="inv-info">
-                                                <strong>Whole Milk (Organic)</strong>
-                                                <span class="inv-stats">18 Liters left / Min: 10.0 Liters</span>
-                                            </div>
-                                        </div>
-                                        <div class="inv-meter-wrapper">
-                                            <div class="inv-meter good-meter" style="width: 80%"></div>
-                                        </div>
-                                        <button class="btn-reorder reorder-ok" data-item="whole-milk">Reorder</button>
-                                    </div>
-
-                                    <div class="inventory-item">
-                                        <div class="inv-details">
-                                            <span class="inv-emoji">☕</span>
-                                            <div class="inv-info">
-                                                <strong>Takeaway Cups (12oz)</strong>
-                                                <span class="inv-stats">450 Units left / Min: 200 Units</span>
-                                            </div>
-                                        </div>
-                                        <div class="inv-meter-wrapper">
-                                            <div class="inv-meter good-meter" style="width: 75%"></div>
-                                        </div>
-                                        <button class="btn-reorder reorder-ok" data-item="cups">Reorder</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Screen 4: Analytics -->
-                        <div class="sim-screen" id="screen-analytics">
-                            <div class="analytics-layout">
-                                <div class="analytics-top-cards">
-                                    <div class="an-card">
-                                        <span class="an-lbl">Daily Net Sales</span>
-                                        <span class="an-val" id="analytics-sales-val">$1,248.50</span>
-                                        <span class="an-trend trend-up">▲ 14.8% vs last week</span>
-                                    </div>
-                                    <div class="an-card">
-                                        <span class="an-lbl">Total Transactions</span>
-                                        <span class="an-val" id="analytics-trans-val">114</span>
-                                        <span class="an-trend trend-up">▲ 8.2% vs last week</span>
-                                    </div>
-                                    <div class="an-card">
-                                        <span class="an-lbl">Avg. Ticket Size</span>
-                                        <span class="an-val">$10.95</span>
-                                        <span class="an-trend trend-up">▲ 6.1% average spend</span>
-                                    </div>
-                                </div>
-                                <div class="analytics-graph-container">
-                                    <div class="graph-header">
-                                        <h5>Hourly Sales Distribution</h5>
-                                        <span class="graph-legend">Current Peak Hour: 08:30 AM</span>
-                                    </div>
-                                    <div class="graph-bars">
-                                        <div class="graph-bar-col">
-                                            <div class="graph-bar" style="height: 15%"></div>
-                                            <span class="graph-lbl">7a</span>
-                                        </div>
-                                        <div class="graph-bar-col">
-                                            <div class="graph-bar" style="height: 65%"></div>
-                                            <span class="graph-lbl">8a</span>
-                                        </div>
-                                        <div class="graph-bar-col">
-                                            <div class="graph-bar active-bar" style="height: 98%">
-                                                <span class="bar-tooltip">$245</span>
-                                            </div>
-                                            <span class="graph-lbl">9a</span>
-                                        </div>
-                                        <div class="graph-bar-col">
-                                            <div class="graph-bar" style="height: 55%"></div>
-                                            <span class="graph-lbl">10a</span>
-                                        </div>
-                                        <div class="graph-bar-col">
-                                            <div class="graph-bar" style="height: 40%"></div>
-                                            <span class="graph-lbl">11a</span>
-                                        </div>
-                                        <div class="graph-bar-col">
-                                            <div class="graph-bar" style="height: 60%"></div>
-                                            <span class="graph-lbl">12p</span>
-                                        </div>
-                                        <div class="graph-bar-col">
-                                            <div class="graph-bar" style="height: 75%"></div>
-                                            <span class="graph-lbl">1p</span>
-                                        </div>
-                                        <div class="graph-bar-col">
-                                            <div class="graph-bar" style="height: 35%"></div>
-                                            <span class="graph-lbl">2p</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Screen 5: Roles Switcher -->
-                        <div class="sim-screen" id="screen-roles">
-                            <div class="roles-layout">
-                                <h4>Visual Access Levels Demo</h4>
-                                <p class="roles-desc">Our software features strict role separation. Click below to experience what different members of your staff see when logging into their shifts.</p>
-                                <div class="roles-grid">
-                                    <button class="role-demo-card active" data-role="barista">
-                                        <div class="role-header">
-                                            <span class="role-icon">☕</span>
-                                            <strong>Barista Access</strong>
-                                        </div>
-                                        <ul class="role-features-list">
-                                            <li class="allowed">POS Terminal Enabled</li>
-                                            <li class="allowed">Claim Open Shifts</li>
-                                            <li class="denied">View Store Profit Margins</li>
-                                            <li class="denied">Edit System Prices</li>
-                                        </ul>
-                                    </button>
-
-                                    <button class="role-demo-card" data-role="manager">
-                                        <div class="role-header">
-                                            <span class="role-icon">💼</span>
-                                            <strong>Manager Access</strong>
-                                        </div>
-                                        <ul class="role-features-list">
-                                            <li class="allowed">POS Terminal Enabled</li>
-                                            <li class="allowed">Publish Shift Schedules</li>
-                                            <li class="allowed">Manual Inventory Auditing</li>
-                                            <li class="denied">Change Staff Salaries</li>
-                                        </ul>
-                                    </button>
-
-                                    <button class="role-demo-card" data-role="admin">
-                                        <div class="role-header">
-                                            <span class="role-icon">👑</span>
-                                            <strong>Admin / Owner</strong>
-                                        </div>
-                                        <ul class="role-features-list">
-                                            <li class="allowed">Full Store Dashboard</li>
-                                            <li class="allowed">Profit Margin Analytics</li>
-                                            <li class="allowed">Connect Print Servers</li>
-                                            <li class="allowed">Manage Global Settings</li>
-                                        </ul>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">Interactive Sandbox</span>
+          <h2 class="section-title">See The System In Action</h2>
+          <p class="section-desc">
+            Click through the live tabs below to test drive the core screens of
+            the management dashboard. Experience the responsive performance
+            firsthand.
+          </p>
         </div>
+
+        <!-- Simulator Framework -->
+        <div class="simulator-wrapper">
+          <!-- Tabs Sidebar/Header -->
+          <div class="simulator-nav">
+            <button class="sim-tab-btn active" data-tab="pos">
+              <span class="btn-icon">🛒</span>
+              <span class="btn-text">POS Terminal</span>
+            </button>
+            <button class="sim-tab-btn" data-tab="scheduler">
+              <span class="btn-icon">📅</span>
+              <span class="btn-text">Shift Scheduler</span>
+            </button>
+            <button class="sim-tab-btn" data-tab="inventory">
+              <span class="btn-icon">📦</span>
+              <span class="btn-text">Inventory Tracker</span>
+            </button>
+            <button class="sim-tab-btn" data-tab="analytics">
+              <span class="btn-icon">📈</span>
+              <span class="btn-text">Sales Analytics</span>
+            </button>
+            <button class="sim-tab-btn" data-tab="roles">
+              <span class="btn-icon">🔑</span>
+              <span class="btn-text">Role Switcher</span>
+            </button>
+          </div>
+
+          <!-- Tablet Screen Container -->
+          <div class="simulator-viewport">
+            <div class="simulator-header-bar">
+              <div class="sim-mockup-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="sim-status-indicator">
+                <span class="pulse-indicator"></span>
+                <span class="status-lbl">Live Demo Session</span>
+              </div>
+              <div class="sim-role-badge" id="current-role-badge">
+                Barista Mode
+              </div>
+            </div>
+
+            <!-- Screen Content Areas -->
+            <div class="simulator-screens">
+              <!-- Screen 1: POS -->
+              <div class="sim-screen active" id="screen-pos">
+                <div class="pos-layout">
+                  <div class="pos-products">
+                    <div class="pos-filter-bar">
+                      <button class="pos-cat-btn active" data-category="coffee">
+                        Coffee
+                      </button>
+                      <button class="pos-cat-btn" data-category="teas">
+                        Teas
+                      </button>
+                      <button class="pos-cat-btn" data-category="bakery">
+                        Bakery
+                      </button>
+                    </div>
+                    <div class="pos-grid">
+                      <button
+                        class="pos-item-card"
+                        data-name="Espresso"
+                        data-price="3.50"
+                        data-category="coffee"
+                      >
+                        <span class="pos-item-emoji">☕</span>
+                        <span class="pos-item-name">Espresso</span>
+                        <span class="pos-item-price">$3.50</span>
+                      </button>
+                      <button
+                        class="pos-item-card"
+                        data-name="Cappuccino"
+                        data-price="4.25"
+                        data-category="coffee"
+                      >
+                        <span class="pos-item-emoji">🥛</span>
+                        <span class="pos-item-name">Cappuccino</span>
+                        <span class="pos-item-price">$4.25</span>
+                      </button>
+                      <button
+                        class="pos-item-card"
+                        data-name="Vanilla Latte"
+                        data-price="4.75"
+                        data-category="coffee"
+                      >
+                        <span class="pos-item-emoji">🍯</span>
+                        <span class="pos-item-name">Vanilla Latte</span>
+                        <span class="pos-item-price">$4.75</span>
+                      </button>
+                      <button
+                        class="pos-item-card"
+                        data-name="Cold Brew"
+                        data-price="4.00"
+                        data-category="coffee"
+                      >
+                        <span class="pos-item-emoji">🧊</span>
+                        <span class="pos-item-name">Cold Brew</span>
+                        <span class="pos-item-price">$4.00</span>
+                      </button>
+                      <button
+                        class="pos-item-card"
+                        data-name="Matcha Latte"
+                        data-price="4.95"
+                        data-category="teas"
+                      >
+                        <span class="pos-item-emoji">🍵</span>
+                        <span class="pos-item-name">Matcha Latte</span>
+                        <span class="pos-item-price">$4.95</span>
+                      </button>
+                      <button
+                        class="pos-item-card"
+                        data-name="Peach Green Tea"
+                        data-price="4.25"
+                        data-category="teas"
+                      >
+                        <span class="pos-item-emoji">🍑</span>
+                        <span class="pos-item-name">Peach Green Tea</span>
+                        <span class="pos-item-price">$4.25</span>
+                      </button>
+                      <button
+                        class="pos-item-card"
+                        data-name="Chai Tea Latte"
+                        data-price="4.75"
+                        data-category="teas"
+                      >
+                        <span class="pos-item-emoji">🧋</span>
+                        <span class="pos-item-name">Chai Tea Latte</span>
+                        <span class="pos-item-price">$4.75</span>
+                      </button>
+                      <button
+                        class="pos-item-card"
+                        data-name="Butter Croissant"
+                        data-price="3.75"
+                        data-category="bakery"
+                      >
+                        <span class="pos-item-emoji">🥐</span>
+                        <span class="pos-item-name">Butter Croissant</span>
+                        <span class="pos-item-price">$3.75</span>
+                      </button>
+                      <button
+                        class="pos-item-card"
+                        data-name="Choc Muffin"
+                        data-price="3.95"
+                        data-category="bakery"
+                      >
+                        <span class="pos-item-emoji">🧁</span>
+                        <span class="pos-item-name">Choc Muffin</span>
+                        <span class="pos-item-price">$3.95</span>
+                      </button>
+                      <button
+                        class="pos-item-card"
+                        data-name="Avocado Toast"
+                        data-price="8.50"
+                        data-category="bakery"
+                      >
+                        <span class="pos-item-emoji">🥑</span>
+                        <span class="pos-item-name">Avocado Toast</span>
+                        <span class="pos-item-price">$8.50</span>
+                      </button>
+                      <button
+                        class="pos-item-card"
+                        data-name="Cinnamon Roll"
+                        data-price="4.00"
+                        data-category="bakery"
+                      >
+                        <span class="pos-item-emoji">🌀</span>
+                        <span class="pos-item-name">Cinnamon Roll</span>
+                        <span class="pos-item-price">$4.00</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="pos-receipt">
+                    <div class="receipt-header">
+                      <h4>Current Order</h4>
+                      <button class="btn-clear-receipt" id="clear-order">
+                        Clear All
+                      </button>
+                    </div>
+                    <div class="receipt-items" id="receipt-list">
+                      <div class="empty-receipt-placeholder">
+                        <span class="placeholder-icon">📥</span>
+                        <p>Click on menu items to start building an order.</p>
+                      </div>
+                    </div>
+                    <div class="receipt-totals">
+                      <div class="total-row">
+                        <span>Subtotal</span>
+                        <span id="pos-subtotal">$0.00</span>
+                      </div>
+                      <div class="total-row">
+                        <span>Tax (8%)</span>
+                        <span id="pos-tax">$0.00</span>
+                      </div>
+                      <div class="total-row grand-total">
+                        <span>Total</span>
+                        <span id="pos-total">$0.00</span>
+                      </div>
+                      <button
+                        class="btn-checkout disabled"
+                        id="pos-checkout"
+                        disabled
+                      >
+                        Complete Checkout
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screen 2: Scheduler -->
+              <div class="sim-screen" id="screen-scheduler">
+                <div class="scheduler-layout">
+                  <div class="scheduler-header">
+                    <h4>Shift Calendar - Current Week</h4>
+                    <button class="btn-primary-sm" id="btn-add-shift">
+                      Publish Shifts
+                    </button>
+                  </div>
+                  <div class="schedule-grid">
+                    <div class="schedule-day-column">
+                      <div class="day-header">Monday</div>
+                      <div class="shift-card barista-shift">
+                        <span class="shift-time">06:00 AM - 02:00 PM</span>
+                        <strong class="shift-name">Sarah M.</strong>
+                        <span class="shift-role">Lead Barista</span>
+                      </div>
+                      <div class="shift-card waiter-shift">
+                        <span class="shift-time">08:00 AM - 04:00 PM</span>
+                        <strong class="shift-name">Alex K.</strong>
+                        <span class="shift-role">Server</span>
+                      </div>
+                    </div>
+                    <div class="schedule-day-column">
+                      <div class="day-header">Tuesday</div>
+                      <div class="shift-card barista-shift">
+                        <span class="shift-time">06:00 AM - 02:00 PM</span>
+                        <strong class="shift-name">Sarah M.</strong>
+                        <span class="shift-role">Lead Barista</span>
+                      </div>
+                      <div class="shift-card manager-shift">
+                        <span class="shift-time">09:00 AM - 05:00 PM</span>
+                        <strong class="shift-name">David L.</strong>
+                        <span class="shift-role">Manager</span>
+                      </div>
+                    </div>
+                    <div class="schedule-day-column">
+                      <div class="day-header">Wednesday</div>
+                      <div class="shift-card barista-shift">
+                        <span class="shift-time">06:00 AM - 02:00 PM</span>
+                        <strong class="shift-name">Emily R.</strong>
+                        <span class="shift-role">Barista</span>
+                      </div>
+                      <div class="shift-card waiter-shift">
+                        <span class="shift-time">12:00 PM - 08:00 PM</span>
+                        <strong class="shift-name">Alex K.</strong>
+                        <span class="shift-role">Server</span>
+                      </div>
+                    </div>
+                    <div class="schedule-day-column">
+                      <div class="day-header">Thursday</div>
+                      <div class="shift-card open-shift" id="claimable-shift">
+                        <span class="shift-time">06:00 AM - 02:00 PM</span>
+                        <strong class="shift-name">Open Shift</strong>
+                        <button class="btn-claim-shift">Claim Shift</button>
+                      </div>
+                      <div class="shift-card manager-shift">
+                        <span class="shift-time">09:00 AM - 05:00 PM</span>
+                        <strong class="shift-name">David L.</strong>
+                        <span class="shift-role">Manager</span>
+                      </div>
+                    </div>
+                    <div class="schedule-day-column">
+                      <div class="day-header">Friday</div>
+                      <div class="shift-card barista-shift">
+                        <span class="shift-time">06:00 AM - 02:00 PM</span>
+                        <strong class="shift-name">Sarah M.</strong>
+                        <span class="shift-role">Lead Barista</span>
+                      </div>
+                      <div class="shift-card barista-shift">
+                        <span class="shift-time">12:00 PM - 08:00 PM</span>
+                        <strong class="shift-name">Emily R.</strong>
+                        <span class="shift-role">Barista</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screen 3: Inventory -->
+              <div class="sim-screen" id="screen-inventory">
+                <div class="inventory-layout">
+                  <div class="inventory-header">
+                    <h4>Real-Time Inventory Status</h4>
+                    <span class="inventory-summary-tag" id="inv-summary"
+                      >2 Low Stock Warnings</span
+                    >
+                  </div>
+                  <div class="inventory-list">
+                    <div class="inventory-item row-warning" id="inv-beans">
+                      <div class="inv-details">
+                        <span class="inv-emoji">🫘</span>
+                        <div class="inv-info">
+                          <strong>Espresso Beans (Medium Roast)</strong>
+                          <span class="inv-stats" id="beans-stats"
+                            >1.2 kg left / Min: 5.0 kg</span
+                          >
+                        </div>
+                      </div>
+                      <div class="inv-meter-wrapper">
+                        <div
+                          class="inv-meter warning-meter"
+                          id="beans-meter"
+                          style="width: 24%"
+                        ></div>
+                      </div>
+                      <button class="btn-reorder" data-item="beans">
+                        Order Stock
+                      </button>
+                    </div>
+
+                    <div class="inventory-item row-warning" id="inv-oat">
+                      <div class="inv-details">
+                        <span class="inv-emoji">🥛</span>
+                        <div class="inv-info">
+                          <strong>Oat Milk (Barista Blend)</strong>
+                          <span class="inv-stats" id="oat-stats"
+                            >3 Liters left / Min: 12.0 Liters</span
+                          >
+                        </div>
+                      </div>
+                      <div class="inv-meter-wrapper">
+                        <div
+                          class="inv-meter warning-meter"
+                          id="oat-meter"
+                          style="width: 25%"
+                        ></div>
+                      </div>
+                      <button class="btn-reorder" data-item="oat">
+                        Order Stock
+                      </button>
+                    </div>
+
+                    <div class="inventory-item">
+                      <div class="inv-details">
+                        <span class="inv-emoji">🥛</span>
+                        <div class="inv-info">
+                          <strong>Whole Milk (Organic)</strong>
+                          <span class="inv-stats"
+                            >18 Liters left / Min: 10.0 Liters</span
+                          >
+                        </div>
+                      </div>
+                      <div class="inv-meter-wrapper">
+                        <div
+                          class="inv-meter good-meter"
+                          style="width: 80%"
+                        ></div>
+                      </div>
+                      <button
+                        class="btn-reorder reorder-ok"
+                        data-item="whole-milk"
+                      >
+                        Reorder
+                      </button>
+                    </div>
+
+                    <div class="inventory-item">
+                      <div class="inv-details">
+                        <span class="inv-emoji">☕</span>
+                        <div class="inv-info">
+                          <strong>Takeaway Cups (12oz)</strong>
+                          <span class="inv-stats"
+                            >450 Units left / Min: 200 Units</span
+                          >
+                        </div>
+                      </div>
+                      <div class="inv-meter-wrapper">
+                        <div
+                          class="inv-meter good-meter"
+                          style="width: 75%"
+                        ></div>
+                      </div>
+                      <button class="btn-reorder reorder-ok" data-item="cups">
+                        Reorder
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screen 4: Analytics -->
+              <div class="sim-screen" id="screen-analytics">
+                <div class="analytics-layout">
+                  <div class="analytics-top-cards">
+                    <div class="an-card">
+                      <span class="an-lbl">Daily Net Sales</span>
+                      <span class="an-val" id="analytics-sales-val"
+                        >$1,248.50</span
+                      >
+                      <span class="an-trend trend-up"
+                        >▲ 14.8% vs last week</span
+                      >
+                    </div>
+                    <div class="an-card">
+                      <span class="an-lbl">Total Transactions</span>
+                      <span class="an-val" id="analytics-trans-val">114</span>
+                      <span class="an-trend trend-up">▲ 8.2% vs last week</span>
+                    </div>
+                    <div class="an-card">
+                      <span class="an-lbl">Avg. Ticket Size</span>
+                      <span class="an-val">$10.95</span>
+                      <span class="an-trend trend-up"
+                        >▲ 6.1% average spend</span
+                      >
+                    </div>
+                  </div>
+                  <div class="analytics-graph-container">
+                    <div class="graph-header">
+                      <h5>Hourly Sales Distribution</h5>
+                      <span class="graph-legend"
+                        >Current Peak Hour: 08:30 AM</span
+                      >
+                    </div>
+                    <div class="graph-bars">
+                      <div class="graph-bar-col">
+                        <div class="graph-bar" style="height: 15%"></div>
+                        <span class="graph-lbl">7a</span>
+                      </div>
+                      <div class="graph-bar-col">
+                        <div class="graph-bar" style="height: 65%"></div>
+                        <span class="graph-lbl">8a</span>
+                      </div>
+                      <div class="graph-bar-col">
+                        <div class="graph-bar active-bar" style="height: 98%">
+                          <span class="bar-tooltip">$245</span>
+                        </div>
+                        <span class="graph-lbl">9a</span>
+                      </div>
+                      <div class="graph-bar-col">
+                        <div class="graph-bar" style="height: 55%"></div>
+                        <span class="graph-lbl">10a</span>
+                      </div>
+                      <div class="graph-bar-col">
+                        <div class="graph-bar" style="height: 40%"></div>
+                        <span class="graph-lbl">11a</span>
+                      </div>
+                      <div class="graph-bar-col">
+                        <div class="graph-bar" style="height: 60%"></div>
+                        <span class="graph-lbl">12p</span>
+                      </div>
+                      <div class="graph-bar-col">
+                        <div class="graph-bar" style="height: 75%"></div>
+                        <span class="graph-lbl">1p</span>
+                      </div>
+                      <div class="graph-bar-col">
+                        <div class="graph-bar" style="height: 35%"></div>
+                        <span class="graph-lbl">2p</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screen 5: Roles Switcher -->
+              <div class="sim-screen" id="screen-roles">
+                <div class="roles-layout">
+                  <h4>Visual Access Levels Demo</h4>
+                  <p class="roles-desc">
+                    Our software features strict role separation. Click below to
+                    experience what different members of your staff see when
+                    logging into their shifts.
+                  </p>
+                  <div class="roles-grid">
+                    <button class="role-demo-card active" data-role="barista">
+                      <div class="role-header">
+                        <span class="role-icon">☕</span>
+                        <strong>Barista Access</strong>
+                      </div>
+                      <ul class="role-features-list">
+                        <li class="allowed">POS Terminal Enabled</li>
+                        <li class="allowed">Claim Open Shifts</li>
+                        <li class="denied">View Store Profit Margins</li>
+                        <li class="denied">Edit System Prices</li>
+                      </ul>
+                    </button>
+
+                    <button class="role-demo-card" data-role="manager">
+                      <div class="role-header">
+                        <span class="role-icon">💼</span>
+                        <strong>Manager Access</strong>
+                      </div>
+                      <ul class="role-features-list">
+                        <li class="allowed">POS Terminal Enabled</li>
+                        <li class="allowed">Publish Shift Schedules</li>
+                        <li class="allowed">Manual Inventory Auditing</li>
+                        <li class="denied">Change Staff Salaries</li>
+                      </ul>
+                    </button>
+
+                    <button class="role-demo-card" data-role="admin">
+                      <div class="role-header">
+                        <span class="role-icon">👑</span>
+                        <strong>Admin / Owner</strong>
+                      </div>
+                      <ul class="role-features-list">
+                        <li class="allowed">Full Store Dashboard</li>
+                        <li class="allowed">Profit Margin Analytics</li>
+                        <li class="allowed">Connect Print Servers</li>
+                        <li class="allowed">Manage Global Settings</li>
+                      </ul>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Workflow Section -->
     <section class="workflow" id="workflow">
-        <div class="section-container">
-            <div class="section-header">
-                <span class="section-tag">How It Works</span>
-                <h2 class="section-title">Seamless Administrative Workflow</h2>
-                <p class="section-desc">Designed to fit right in with your current business structure, without requiring expensive technical training for your baristas.</p>
-            </div>
-            <div class="workflow-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-badge">1</div>
-                    <div class="timeline-content">
-                        <h3>Configure Menu & Tables</h3>
-                        <p>Set up menu categories, pricing, table arrangements, and low-stock limits in the simple browser control panel. Takes less than an hour.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-badge">2</div>
-                    <div class="timeline-content">
-                        <h3>Assign Custom Staff Pins</h3>
-                        <p>Generate secure four-digit access codes for your employees. Assign custom roles to limit exposure to core settings and business metrics.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-badge">3</div>
-                    <div class="timeline-content">
-                        <h3>Start Taking Orders</h3>
-                        <p>Waitstaff and baristas log in via touch tablet, placing orders directly into the queue. Dynamic inventory counts down in the background automatically.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-badge">4</div>
-                    <div class="timeline-content">
-                        <h3>Review Daily Audits</h3>
-                        <p>Receive automatically formatted sales reports, inventory reorder lists, and labor cost efficiency charts in your owner inbox every evening.</p>
-                    </div>
-                </div>
-            </div>
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">How It Works</span>
+          <h2 class="section-title">Seamless Administrative Workflow</h2>
+          <p class="section-desc">
+            Designed to fit right in with your current business structure,
+            without requiring expensive technical training for your baristas.
+          </p>
         </div>
+        <div class="workflow-timeline">
+          <div class="timeline-item">
+            <div class="timeline-badge">1</div>
+            <div class="timeline-content">
+              <h3>Configure Menu & Tables</h3>
+              <p>
+                Set up menu categories, pricing, table arrangements, and
+                low-stock limits in the simple browser control panel. Takes less
+                than an hour.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-badge">2</div>
+            <div class="timeline-content">
+              <h3>Assign Custom Staff Pins</h3>
+              <p>
+                Generate secure four-digit access codes for your employees.
+                Assign custom roles to limit exposure to core settings and
+                business metrics.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-badge">3</div>
+            <div class="timeline-content">
+              <h3>Start Taking Orders</h3>
+              <p>
+                Waitstaff and baristas log in via touch tablet, placing orders
+                directly into the queue. Dynamic inventory counts down in the
+                background automatically.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-badge">4</div>
+            <div class="timeline-content">
+              <h3>Review Daily Audits</h3>
+              <p>
+                Receive automatically formatted sales reports, inventory reorder
+                lists, and labor cost efficiency charts in your owner inbox
+                every evening.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Value Propositions Section -->
     <section class="value-prop">
-        <div class="section-container">
-            <div class="value-prop-inner">
-                <div class="value-prop-content">
-                    <span class="section-tag-light">Why This Matters</span>
-                    <h2 class="value-title">Software Built To Pay For Itself</h2>
-                    <p class="value-text">We don't build software just to look clean. We design with the sole purpose of lowering overhead, reducing shrinkage, and ensuring staff accountability.</p>
-                    
-                    <div class="value-bullet">
-                        <div class="bullet-check">✓</div>
-                        <div>
-                            <strong>Instant Staff Accountability:</strong> Every register log, recipe modifier, and shift change is tagged with employee pins.
-                        </div>
-                    </div>
-                    <div class="value-bullet">
-                        <div class="bullet-check">✓</div>
-                        <div>
-                            <strong>Eliminate Paper Costs:</strong> Kitchen display modes save you hundreds of dollars in thermal printer rolls and ink cartridges.
-                        </div>
-                    </div>
-                    <div class="value-bullet">
-                        <div class="bullet-check">✓</div>
-                        <div>
-                            <strong>Maximize Table Turnover:</strong> Visual floor plans keep waitstaff updated on table statuses, speeding up seating and cleaning.
-                        </div>
-                    </div>
-                </div>
-                <div class="value-prop-stats">
-                    <div class="value-stat-card">
-                        <div class="val-num">20%</div>
-                        <div class="val-desc">Average increase in table turnover rates</div>
-                    </div>
-                    <div class="value-stat-card">
-                        <div class="val-num">$400+</div>
-                        <div class="val-desc">Saved monthly on manual inventory counting hours</div>
-                    </div>
-                </div>
+      <div class="section-container">
+        <div class="value-prop-inner">
+          <div class="value-prop-content">
+            <span class="section-tag-light">Why This Matters</span>
+            <h2 class="value-title">Software Built To Pay For Itself</h2>
+            <p class="value-text">
+              We don't build software just to look clean. We design with the
+              sole purpose of lowering overhead, reducing shrinkage, and
+              ensuring staff accountability.
+            </p>
+
+            <div class="value-bullet">
+              <div class="bullet-check">✓</div>
+              <div>
+                <strong>Instant Staff Accountability:</strong> Every register
+                log, recipe modifier, and shift change is tagged with employee
+                pins.
+              </div>
             </div>
+            <div class="value-bullet">
+              <div class="bullet-check">✓</div>
+              <div>
+                <strong>Eliminate Paper Costs:</strong> Kitchen display modes
+                save you hundreds of dollars in thermal printer rolls and ink
+                cartridges.
+              </div>
+            </div>
+            <div class="value-bullet">
+              <div class="bullet-check">✓</div>
+              <div>
+                <strong>Maximize Table Turnover:</strong> Visual floor plans
+                keep waitstaff updated on table statuses, speeding up seating
+                and cleaning.
+              </div>
+            </div>
+          </div>
+          <div class="value-prop-stats">
+            <div class="value-stat-card">
+              <div class="val-num">20%</div>
+              <div class="val-desc">
+                Average increase in table turnover rates
+              </div>
+            </div>
+            <div class="value-stat-card">
+              <div class="val-num">$400+</div>
+              <div class="val-desc">
+                Saved monthly on manual inventory counting hours
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Trust & Tech Signals Section -->
     <section class="tech-trust">
-        <div class="section-container">
-            <h3 class="trust-title">Built On Robust, Client-Grade Technology</h3>
-            <div class="trust-grid">
-                <div class="trust-badge-item">
-                    <span class="trust-icon">📱</span>
-                    <h4>100% Responsive Design</h4>
-                    <p>Designed for touch iPad screens, mobile phones, and admin desktop monitors.</p>
-                </div>
-                <div class="trust-badge-item">
-                    <span class="trust-icon">🔒</span>
-                    <h4>Secure Local Databases</h4>
-                    <p>Encrypted data channels. The POS continues taking orders even if the internet goes down.</p>
-                </div>
-                <div class="trust-badge-item">
-                    <span class="trust-icon">⚡</span>
-                    <h4>High-Speed Performance</h4>
-                    <p>Optimized bundle sizes load instantly over slow cellular networks in busy venues.</p>
-                </div>
-                <div class="trust-badge-item">
-                    <span class="trust-icon">🖨️</span>
-                    <h4>Print Hub Integration</h4>
-                    <p>Integrates natively with Star Micronics, Epson thermal printers, and network receipt queues.</p>
-                </div>
-            </div>
+      <div class="section-container">
+        <h3 class="trust-title">Built On Robust, Client-Grade Technology</h3>
+        <div class="trust-grid">
+          <div class="trust-badge-item">
+            <span class="trust-icon">📱</span>
+            <h4>100% Responsive Design</h4>
+            <p>
+              Designed for touch iPad screens, mobile phones, and admin desktop
+              monitors.
+            </p>
+          </div>
+          <div class="trust-badge-item">
+            <span class="trust-icon">🔒</span>
+            <h4>Secure Local Databases</h4>
+            <p>
+              Encrypted data channels. The POS continues taking orders even if
+              the internet goes down.
+            </p>
+          </div>
+          <div class="trust-badge-item">
+            <span class="trust-icon">⚡</span>
+            <h4>High-Speed Performance</h4>
+            <p>
+              Optimized bundle sizes load instantly over slow cellular networks
+              in busy venues.
+            </p>
+          </div>
+          <div class="trust-badge-item">
+            <span class="trust-icon">🖨️</span>
+            <h4>Print Hub Integration</h4>
+            <p>
+              Integrates natively with Star Micronics, Epson thermal printers,
+              and network receipt queues.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Contact & Lead Form Section -->
     <section class="contact" id="contact">
-        <div class="section-container">
-            <div class="contact-box">
-                <div class="contact-info-panel">
-                    <h2 class="contact-title">Want this system for your cafe?</h2>
-                    <p class="contact-lead-text">Let's discuss how we can tailor CremaFlow to match your exact floor plan, menu modifiers, and team schedules.</p>
-                    
-                    <div class="contact-details">
-                        <div class="details-item">
-                            <span class="details-icon">✉️</span>
-                            <div>
-                                <span class="lbl">Email Us</span>
-                                <strong>hello@freelancedeveloper.com</strong>
-                            </div>
-                        </div>
-                        <div class="details-item">
-                            <span class="details-icon">📞</span>
-                            <div>
-                                <span class="lbl">Call Anytime</span>
-                                <strong>(555) 432-8760</strong>
-                            </div>
-                        </div>
-                    </div>
+      <div class="section-container">
+        <div class="contact-box">
+          <div class="contact-info-panel">
+            <h2 class="contact-title">Want this system for your cafe?</h2>
+            <p class="contact-lead-text">
+              Let's discuss how we can tailor Cafefy to match your exact floor
+              plan, menu modifiers, and team schedules.
+            </p>
+
+            <div class="contact-details">
+              <div class="details-item">
+                <span class="details-icon">✉️</span>
+                <div>
+                  <span class="lbl">Email Us</span>
+                  <strong>duootech2@gmail.com</strong>
                 </div>
-                <div class="contact-form-panel">
-                    <form id="lead-form" class="lead-form" novalidate>
-                        <div class="form-group">
-                            <input type="text" id="form-name" required placeholder=" ">
-                            <label for="form-name">Full Name</label>
-                            <span class="input-error-msg">Please enter your name.</span>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="form-email" required placeholder=" ">
-                            <label for="form-email">Email Address</label>
-                            <span class="input-error-msg">Please enter a valid email.</span>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="form-cafe" placeholder=" ">
-                            <label for="form-cafe">Cafe / Restaurant Name</label>
-                        </div>
-                        <div class="form-group">
-                            <select id="form-type" required>
-                                <option value="" disabled selected hidden></option>
-                                <option value="coffee-shop">Coffee Shop / Espresso Bar</option>
-                                <option value="bakery">Bakery / Patisserie</option>
-                                <option value="restaurant">Bistro / Restaurant</option>
-                                <option value="other">Other Venue Type</option>
-                            </select>
-                            <label for="form-type" class="select-label">Venue Type</label>
-                            <span class="input-error-msg">Please select your venue type.</span>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="form-message" rows="4" placeholder=" "></textarea>
-                            <label for="form-message">Tell us about your operations</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block" id="btn-submit-lead">
-                            <span class="btn-text-content">Request Custom Proposal</span>
-                            <span class="loader-spinner hidden"></span>
-                        </button>
-                    </form>
-                    
-                    <!-- Success State (Hidden by default) -->
-                    <div class="form-success-state hidden" id="form-success">
-                        <div class="success-icon">✓</div>
-                        <h3>Proposal Request Received!</h3>
-                        <p>Thank you. We'll analyze your venue details and send a customized quote summary to your inbox within 24 hours.</p>
-                        <button class="btn btn-secondary-sm" id="btn-reset-form">Send Another Request</button>
-                    </div>
+              </div>
+              <div class="details-item">
+                <span class="details-icon">📞</span>
+                <div>
+                  <span class="lbl">Call Anytime</span>
+                  <strong>+91-7478524191</strong>
                 </div>
+              </div>
             </div>
+          </div>
+          <div class="contact-form-panel">
+            <form id="lead-form" class="lead-form" novalidate>
+              <div class="form-group">
+                <input type="text" id="form-name" required placeholder=" " />
+                <label for="form-name">Full Name</label>
+                <span class="input-error-msg">Please enter your name.</span>
+              </div>
+              <div class="form-group">
+                <input type="email" id="form-email" required placeholder=" " />
+                <label for="form-email">Email Address</label>
+                <span class="input-error-msg">Please enter a valid email.</span>
+              </div>
+              <div class="form-group">
+                <input type="text" id="form-cafe" placeholder=" " />
+                <label for="form-cafe">Cafe / Restaurant Name</label>
+              </div>
+              <div class="form-group">
+                <input type="text" id="form-phone" placeholder=" " />
+                <label for="form-phone">Phone Number</label>
+              </div>
+              <!-- <div class="form-group">
+                <select id="form-type" required>
+                  <option value="" disabled selected hidden></option>
+                  <option value="coffee-shop">
+                    Coffee Shop / Espresso Bar
+                  </option>
+                  <option value="bakery">Bakery / Patisserie</option>
+                  <option value="restaurant">Bistro / Restaurant</option>
+                  <option value="other">Other Venue Type</option>
+                </select>
+                <label for="form-type" class="select-label">Venue Type</label>
+                <span class="input-error-msg"
+                  >Please select your venue type.</span
+                >
+              </div> -->
+              <div class="form-group">
+                <textarea id="form-message" rows="4" placeholder=" "></textarea>
+                <label for="form-message">Tell us about your operations</label>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary btn-block"
+                id="btn-submit-lead"
+              >
+                <span class="btn-text-content">Request Custom Proposal</span>
+                <span class="loader-spinner hidden"></span>
+              </button>
+            </form>
+
+            <!-- Success State (Hidden by default) -->
+            <div class="form-success-state hidden" id="form-success">
+              <div class="success-icon">✓</div>
+              <h3>Proposal Request Received!</h3>
+              <p>
+                Thank you. We'll analyze your venue details and send a
+                customized quote summary to your inbox within 24 hours.
+              </p>
+              <button class="btn btn-secondary-sm" id="btn-reset-form">
+                Send Another Request
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Toast Notification (Floating status popups) -->
     <div class="toast-notification hidden" id="toast">
-        <span class="toast-icon">✓</span>
-        <span class="toast-message">Success!</span>
+      <span class="toast-icon">✓</span>
+      <span class="toast-message">Success!</span>
     </div>
 
     <!-- Footer Section -->
     <footer class="footer">
-        <div class="section-container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="#hero" class="footer-logo">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-icon">
-                            <path d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V8H6V19ZM8 10H16V19H8V10ZM16 5V3H8V5H3V7H21V5H16Z" fill="currentColor"/>
-                        </svg>
-                        <span>CremaFlow</span>
-                    </a>
-                    <p>Designed and hand-coded by **Your Portfolio Name**. High-performance web applications targeting service businesses.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Navigation</h4>
-                    <a href="#hero">Home</a>
-                    <a href="#problems">Challenges</a>
-                    <a href="#features">Features</a>
-                    <a href="#demo">Live Demo</a>
-                </div>
-                <div class="footer-socials">
-                    <h4>Let's Collaborate</h4>
-                    <p>Have an app idea? Let's build a secure, tailor-made digital workspace to streamline your business operations.</p>
-                    <div class="social-icons">
-                        <a href="#" aria-label="GitHub">GH</a>
-                        <a href="#" aria-label="LinkedIn">LN</a>
-                        <a href="#" aria-label="Twitter">TW</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 CremaFlow. Created for demonstration and portfolio showcase purposes. All rights reserved.</p>
-            </div>
+      <div class="section-container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#hero" class="footer-logo">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="logo-icon"
+              >
+                <path
+                  d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V8H6V19ZM8 10H16V19H8V10ZM16 5V3H8V5H3V7H21V5H16Z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span>Cafefy</span>
+            </a>
+            <p>
+              Designed and hand-coded by <b>DuooTech</b>. High-performance web
+              applications targeting service businesses.
+            </p>
+          </div>
+          <div class="footer-links">
+            <h4>Navigation</h4>
+            <a href="#hero">Home</a>
+            <a href="#problems">Challenges</a>
+            <a href="#features">Features</a>
+            <a href="#demo">Live Demo</a>
+          </div>
+          <div class="footer-socials">
+            <h4>Let's Collaborate</h4>
+            <p>
+              Have an app idea? Let's build a secure, tailor-made digital
+              workspace to streamline your business operations.
+            </p>
+            <!-- <div class="social-icons">
+              <a href="#" aria-label="GitHub">GH</a>
+              <a href="#" aria-label="LinkedIn">LN</a>
+              <a href="#" aria-label="Twitter">TW</a>
+            </div> -->
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 DuooTech. Created for demonstration and portfolio
+            showcase purposes. All rights reserved.
+          </p>
+        </div>
+      </div>
     </footer>
 
     <!-- Javascript Script -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
