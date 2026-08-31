@@ -1,0 +1,14 @@
+{
+  "name": "cremaflow-demo",
+  "version": "1.0.0",
+  "description": "CremaFlow Cafe Management System Demo Website - Portfolio Piece",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -p 9090",
+    "dev": "http-server -p 9090"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
